@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideBar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="drag-and-drop.js"></script>
+</head>
+
+<body>
+    <!-- side bar generale -->
+    <div id="right-sideBar">
+        <!-- header side bar  -->
+        <div id="headerRight-sideBar">
+            <!-- menu -->
+            <div id="header-menu">
+                <!-- trascina elemento -->
+                <div id="drag-element">
+                    <span>Trascina un elemento</span>
+                    <button type="button" class="orange-button">fine</button>
+                </div>
+                <!-- lista orizzontale del menu -->
+                <div class="horizontal-list">
+                    <ul>
+                        <li id="star"><a href="#"><img src="./source/Icon ionic-ios-star.svg" alt="immagine stella"
+                                    width="22px" height="22px"></a></li>
+                        <li><a href="#"><img src="./source/videocam.svg" alt="immagine videocamera1" width="22px"
+                                    height="22px"></a></li>
+                        <li><a href="#"><img src="./source/Icon feather-grid.svg" alt="immagine griglia1" width="22px"
+                                    height="22px"></a></li>
+                        <li><a href="#"><img src="./source/Icon ionic-ios-flash.svg" alt="immagine fulmine" width="22px"
+                                    height="22px"></a></li>
+                        <li><a href="#"><img src="./source/Icon awesome-map-marker-alt.svg" alt="immagine map"
+                                    width="22px" height="22px"></a></li>
+                        <li><a href="#"><img src="./source/Icon open-infinity.svg" alt="immagine infinto " width="22px"
+                                    height="22px"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- barra di gestione -->
+            <div id="management-bar">
+                <a href="#"><img src="./source/icon_search.svg" alt="immagine lente ingrandimento" width="18px"
+                        height="18px"></a>
+                <input type="text" placeholder="Cerca">
+                <a href="#" class="tooltip"><img src="./source/Icon feather-folder-plus.svg"
+                        alt="immagine nuova cartella width=" 18px" height="18px" class="new-folder"> <span
+                        class="tooltiptext-newFolder">Crea nuova cartella</span> </a>
+                <a href="#"><img src="./source/Icon awesome-list-ul.svg" alt="immagine list ul" width="18px"
+                        height="18px"></a>
+            </div>
+        </div>
+        <!-- body side bar -->
+        <div id="bodyRight-sideBar">
+            <ul>
+                <!-- voci del menu a tendina -->
+                <ul class="dropdown-showAlways">
+                    <li><a href="#"><img src="./source/griglia.svg" alt="immagine videocamera2" width="16"
+                                height="16">Ingresso multimpianto <img src="./source/3-dots-horizontal-svgrepo-com.svg"
+                                alt="immagine 3 puntini" width="18" height="18" class="dots"></a>
+                        <div class="menu-item">
+                            <ul>
+                                <li class="open-element"><a href="#">Apri</a></li>
+                                <hr>
+                                <li><a href="#">Copia in<img src="./source/right-arrow-svgrepo-com.svg"
+                                            alt="immagine freccia destra" width="12" height="12"
+                                            class="arrow-right"></a></li>
+                                <hr>
+                                <li class="show-info"><a href="#">Info</a></li>
+                                <hr>
+                                <li class="delete-element"><a href="#">Elimina</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="./source/griglia.svg" alt="immagine videocamera2" width="16"
+                                height="16">Vista multimpianto <img src="./source/3-dots-horizontal-svgrepo-com.svg"
+                                alt="immagine 3 puntini" width="18" height="18" class="dots"></a>
+                        <div class="menu-item">
+                            <ul>
+                                <li class="open-element"><a href="#">Apri</a></li>
+                                <hr>
+                                <li><a href="#">Copia in<img src="./source/right-arrow-svgrepo-com.svg"
+                                            alt="immagine freccia destra" width="12" height="12"
+                                            class="arrow-right"></a></li>
+                                <hr>
+                                <li class="show-info"><a href="#">Info</a></li>
+                                <hr>
+                                <li class="delete-element"><a href="#">Elimina</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- menu a tendina -->
+                <li class="dropdown"><a href="#"><img src="./source/Icon awesome-house-damage.svg" alt="immagine casa"
+                            width="16" height="16">IMPIANTO B4WEB AL<img src="./source/left-arrow-svgrepo-com.svg"
+                            alt="immagine freccia" width="16" height="16" class="arrow"></a></li>
+                <ul class="dropdown-content connectedSortable">
+                    <li><a href="#"><img src="./source/Icon ionic-ios-videocam.svg" alt="immagine videocamera2"
+                                width="16" height="16">Ingresso<img src="./source/3-dots-horizontal-svgrepo-com.svg"
+                                alt="immagine 3 puntini" width="18" height="18" class="dots"></a>
+                        <div class="menu-item">
+                            <ul>
+                                <li class="open-element"><a href="#">Apri</a></li>
+                                <hr>
+                                <li><a href="#">Copia in<img src="./source/right-arrow-svgrepo-com.svg"
+                                            alt="immagine freccia destra" width="12" height="12"
+                                            class="arrow-right"></a></li>
+                                <hr>
+                                <li class="show-info"><a href="#">Info</a></li>
+                                <hr>
+                                <li class="delete-element"><a href="#">Elimina</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#"><img src="./source/Icon ionic-ios-videocam.svg" alt="immagine videocamera2"
+                                width="16" height="16">Sala riunioni<img
+                                src="./source/3-dots-horizontal-svgrepo-com.svg" alt="immagine 3 puntini" width="18"
+                                height="18" class="dots"></a>
+                        <div class="menu-item">
+                            <ul>
+                                <li class="open-element"><a href="#">Apri</a></li>
+                                <hr>
+                                <li><a href="#">Copia in<img src="./source/right-arrow-svgrepo-com.svg"
+                                            alt="immagine freccia destra" width="12" height="12"
+                                            class="arrow-right"></a></li>
+                                <hr>
+                                <li class="show-info"><a href="#">Info</a></li>
+                                <hr>
+                                <li class="delete-element"><a href="#">Elimina</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="folder"><a href="#"><img src="./source/Icon awesome-folder-open.svg"
+                                alt="immagine cartella aperta" width="16" height="16">Cartella logistica<img
+                                src="./source/3-dots-horizontal-svgrepo-com.svg" alt="immagine 3 puntini" width="18"
+                                height="18" class="dots"></a>
+                        <div class="menu-item-folder">
+                            <ul>
+                                <li><a href="#">Copia in<img src="./source/right-arrow-svgrepo-com.svg"
+                                            alt="immagine freccia destra" width="12" height="12"
+                                            class="arrow-right"></a></li>
+                                <hr>
+                                <li><a href="#">Nuova cartella</a></li>
+                                <hr>
+                                <li class="rename"><a href="#">Rinomina</a></li>
+                                <hr>
+                                <li class="delete-element"><a href="#">Elimina</a></li>
+                            </ul>
+                        </div>
+                        <!-- contenuto cartella -->
+                        <ul class="folder-content connectedSortable">
+                            <li><a href="#"><img src="./source/Icon ionic-ios-videocam.svg" alt="immagine videocamera2"
+                                        width="16" height="16">Ufficio 2<img
+                                        src="./source/3-dots-horizontal-svgrepo-com.svg" alt="immagine 3 puntini"
+                                        width="18" height="18" class="dots"></a>
+                                <div class="menu-item">
+                                    <ul>
+                                        <li class="open-element"><a href="#">Apri</a></li>
+                                        <hr>
+                                        <li><a href="#">Copia in<img src="./source/right-arrow-svgrepo-com.svg"
+                                                    alt="immagine freccia destra" width="12" height="12"
+                                                    class="arrow-right"></a></li>
+                                        <hr>
+                                        <li class="show-info"><a href="#">Info</a></li>
+                                        <hr>
+                                        <li class="delete-element"><a href="#">Elimina</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#"><img src="./source/Icon ionic-ios-videocam.svg" alt="immagine videocamera2"
+                                        width="16" height="16">Parcheggio auto<img
+                                        src="./source/3-dots-horizontal-svgrepo-com.svg" alt="immagine 3 puntini"
+                                        width="18" height="18" class="dots"></a>
+                                <div class="menu-item">
+                                    <ul>
+                                        <li><a href="#">Apri</a></li>
+                                        <hr>
+                                        <li><a href="#">Copia in<img src="./source/right-arrow-svgrepo-com.svg"
+                                                    alt="immagine freccia destra" width="12" height="12"
+                                                    class="arrow-right"></a></li>
+                                        <hr>
+                                        <li class="show-info"><a href="#">Info</a></li>
+                                        <hr>
+                                        <li class="delete-element"><a href="#">Elimina</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <li class="dropdown"><a href="#"><img src="./source/Icon awesome-house-damage.svg" alt="immagine casa"
+                            width="16" height="16">B4WEB MILANO<img src="./source/left-arrow-svgrepo-com.svg"
+                            alt="immagine freccia" width="16" height="16" class="arrow"></a></li>
+                <ul class="dropdown-content">
+                    <li><a href="#"><img src="./source/Icon ionic-ios-videocam.svg" alt="immagine videocamera2"
+                                width="16" height="16">Prova Milano<img src="./source/3-dots-horizontal-svgrepo-com.svg"
+                                alt="immagine 3 puntini" width="18" height="18" class="dots"></a>
+                        <div class="menu-item">
+                            <ul>
+                                <li class="open-element"><a href="#">Apri</a></li>
+                                <hr>
+                                <li><a href="#">Copia in<img src="./source/right-arrow-svgrepo-com.svg"
+                                            alt="immagine freccia destra" width="12" height="12"
+                                            class="arrow-right"></a></li>
+                                <hr>
+                                <li class="show-info"><a href="#">Info</a></li>
+                                <hr>
+                                <li class="delete-element"><a href="#">Elimina</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <li class="dropdown"><a href="#"><img src="./source/Icon awesome-house-damage.svg" alt="immagine casa"
+                            width="16" height="16">B4WEB TORINO<img src="./source/left-arrow-svgrepo-com.svg"
+                            alt="immagine freccia" width="16" height="16" class="arrow"></a></li>
+                <ul class="dropdown-content">
+                    <li><a href="#"><img src="./source/Icon ionic-ios-videocam.svg" alt="immagine videocamera2"
+                                width="16" height="16">Prova Torino<img src="./source/3-dots-horizontal-svgrepo-com.svg"
+                                alt="immagine 3 puntini" width="18" height="18" class="dots"></a>
+                        <div class="menu-item">
+                            <ul>
+                                <li class="open-element"><a href="#">Apri</a></li>
+                                <hr>
+                                <li><a href="#">Copia in<img src="./source/right-arrow-svgrepo-com.svg"
+                                            alt="immagine freccia destra" width="12" height="12"
+                                            class="arrow-right"></a></li>
+                                <hr>
+                                <li class="show-info"><a href="#">Info</a></li>
+                                <hr>
+                                <li class="delete-element"><a href="#">Elimina</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <li class="dropdown"><a href="#"><img src="./source/Icon awesome-house-damage.svg" alt="immagine casa"
+                            width="16" height="16">B4WEB CASTROVILLARI<img src="./source/left-arrow-svgrepo-com.svg"
+                            alt="immagine freccia" width="16" height="16" class="arrow"></a></li>
+                <ul class="dropdown-content">
+                    <li><a href="#"><img src="./source/Icon ionic-ios-videocam.svg" alt="immagine videocamera2"
+                                width="16" height="16">Prova Castrovillari<img src="./source/3-dots-horizontal-svgrepo-com.svg"
+                                alt="immagine 3 puntini" width="18" height="18" class="dots"></a>
+                        <div class="menu-item">
+                            <ul>
+                                <li class="open-element"><a href="#">Apri</a></li>
+                                <hr>
+                                <li><a href="#">Copia in<img src="./source/right-arrow-svgrepo-com.svg"
+                                            alt="immagine freccia destra" width="12" height="12"
+                                            class="arrow-right"></a></li>
+                                <hr>
+                                <li class="show-info"><a href="#">Info</a></li>
+                                <hr>
+                                <li class="delete-element"><a href="#">Elimina</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </ul>
+
+            <!-- creare ul cartella -->
+        </div>
+</body>
+
+</html>
