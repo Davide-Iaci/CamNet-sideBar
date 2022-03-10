@@ -1,2 +1,2 @@
 # CamNet-sideBar
-Side bar per il sito CamNet
+Side bar per Camnet - http://app.wamagroup.it/
